@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: raw
     schema: gwz_raw_data
-    tables: 
+    tables:
       - name: sales
         freshness:
           warn_after: { count: 90, period: day }
@@ -24,7 +24,7 @@ sources:
         tests:
           - unique: { column_name: "(orders_id || '-' pdt_id)" }
       - name: product
-        identifier: raw_gz_product 
+        identifier: raw_gz_product
         description: products of greenweez
         columns:
           - name: products_id
